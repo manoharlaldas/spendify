@@ -1,0 +1,93 @@
+<%= form_for Expense.new do |f| %>
+    
+  <button class="btn btn-success">Spendify</button>
+  <%= link_to 'New Expense', new_expense_path %>
+  <%= link_to 'My Expense', expenses_path %>
+    <div>
+
+  <div class='sidebar'>
+
+    <!-- Search: <input ng-model="query"> -->
+
+     </br>
+     </br>
+
+     Sort by:
+
+     <select ng-model="orderProp">
+
+       <option value="date">Newest</option>
+
+       <option value="-date">Oldest</option>     
+
+       <option value="amount">Smallest Amount</option>
+
+       <option value="-amount">Biggest Amount</option> 
+
+     </select>
+
+     </br>
+     </br>
+     
+  </div>
+
+<div class='main'>
+
+    <table class="table table-striped">
+
+      <tr>                
+        <th>Date</th>
+
+        <th>Time</th> 
+
+        <th>Merchant</th>
+
+        <th>Total</th> 
+
+        <th>Category</th>
+
+        <th>Comment</th>
+  
+      </tr>     
+    </table>
+
+</div>
+
+</div>
+
+<div class='expense-form'>
+
+  <!-- <h3 ng-if="!editing">New Expense</h3>
+
+  <h3 ng-if="editing">Edit Expense</h3>
+
+
+
+
+  <!-- <form ng-submit="save(expense)">
+
+    <!-- <input ng-model="expense.date" placeholder='Date'>
+
+    <!-- <input ng-model="expense.time" placeholder='Time'> -->
+
+    <!-- <input ng-model="expense.merchant" placeholder='Merchant'> -->
+
+    <!-- <input ng-model="expense.amount" placeholder="amount"> -->
+
+    <!-- <input ng-model="expense.comment" placeholder="comment"> -->
+
+    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+
+  <!-- </form> --> 
+
+  <!-- <button class="btn btn-success" ng-click="newExpense()">New Expense</button> -->
+
+  <!-- <button ng-if="editing" class="btn btn-danger" ng-click="delete(expense)">Delete</button> -->
+
+
+
+
+</div>
+
+<% end %>
+

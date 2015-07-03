@@ -1,0 +1,10 @@
+<div class="row span4">
+	    <span class="current_user">
+	    	<%= @current_user.name %>
+	    </span>
+	    <span>
+        <%= link_to 'View Profile', users_path(@current_user) %>
+      </span>
+	<%= render 'expenses/form' %>
+</div>
+

@@ -1,0 +1,16 @@
+<% provide :sub_title, @user.name %>
+<div class="container" style="margin-top:120px;">
+	<p id="notice"><%= notice %></p>
+	<%= render 'side_pane' %>
+	<div class="row span6">
+		<% if @user.expense.any? %>
+			
+      		<ol class="posts">
+        		<%= render @expenses %>
+      		</ol>
+      	<%= will_paginate @expenses %>
+		<% else %>
+			<h3>No expenses yet!</h3>
+		<% end %>
+	</div>
+</div>

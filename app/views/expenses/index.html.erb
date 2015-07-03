@@ -1,0 +1,32 @@
+<!-- <p id="notice"><%= notice %></p>
+ -->
+</br>
+</br>
+</br>
+</br>
+</br>
+<h1>Listing Expenses</h1>
+<table>
+      <div class='main'>
+        <table class="table table-striped">
+          <th>Date</th>
+          <th>Merchant</th>
+          <th>Comment</th>
+          <th>Category</th>
+          <th>Total Amount (NPR)</th>
+                  <tbody>
+                  	     <% @expenses.each do |expense| %>      
+                  	            <tr>
+                                  <td><%= expense.date %></td>
+                                  <td><%= expense.merchant %></td>
+                                  <td><%= expense.comment %></td>
+                                  <td><%= expense.category %></td>
+                                  <td><%= expense.total %></td>                
+                  	            </tr>                                          
+                          <% end %>
+                  </tbody>
+        </table>
+      </div>
+</table>
+
+

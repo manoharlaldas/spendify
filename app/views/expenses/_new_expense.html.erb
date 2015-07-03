@@ -1,0 +1,40 @@
+
+<%= form_for Expense.new do |f| %>
+
+</br>
+</br>
+
+
+<h1>Expense</h1>
+
+
+        <div class="field">
+            <%= f.label :name, 'Merchant' %>
+            <%= f.text_field :merchant, :placholder => 'Name' %>
+        </div>
+
+        <div class="field">
+            <%= f.label :date, 'Date' %>
+            <%= f.date_field :date, :placholder => 'Date' %>
+        </div>
+
+        <div class="field">
+            <%= f.label :total %>
+            <%= f.text_field :total, :placeholder => 'Enter Total Amount '%>   
+        </div>
+
+        <div class="field">
+            <%= f.label :comment %><br>
+            <%= f.text_area :comment %><br>
+        </div>
+  
+        <div class="field">
+        	<%= f.label :category, 'Category' %>
+            <%= f.select :category, options_for_select([["select any one", ""], "transportation","Phone", "Meals", "Lodging", "Fuel", "Entertainment","Other"]), :class => 'genForm_dropBox' %>  
+        </div>
+
+        <div class="actions">
+            <%= f.submit :class => 'btn btn-primary' %>
+        </div>
+
+<% end %>

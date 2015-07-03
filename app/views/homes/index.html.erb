@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Spendify</title>
+  </head>
+  <h1>Spendify</h1>
+  <body>
+  	<header class="header-10">
+  	        <div class="container">
+  	        	<div class="navbar span9">
+  	        	    <div class="navbar-inner">
+  	        	    	
+  	        	    		<ul>
+                          <table border="0" align="right">  
+                          <tr>
+                          <td colspan="33%" align="right"><a href="#">HOME</a></td>
+                          <td colspan="33%" align="right"><a href="#">Help</a></td>
+                          <td colspan="33%" align="right"><a href="#">Sign up</a></td>
+                          </tr>
+                      </ul>  	
+  	        	    </div>
+  	        	</div>
+  	        </div>
+  	    </div>
+  	</header>
+  </body>
+</html>
+ -->
+
+
+ <div class="container" style="margin-top:200px;">
+<% if notice %>
+   <p><%= notice %>
+<% end %>
+<% if @current_user %>
+  <% provide :sub_title, "Welcome #{@current_user.name}" %>
+  <%= render 'current_user' %>
+  <% else %>
+      <% provide :sub_title, 'Home' %>
+      <div class="row span3">
+      <h4>Login to be Onboard.</h4>
+          <%= render 'sessions/form' %>
+      </div>
+       
+<% end %>
+</div>
